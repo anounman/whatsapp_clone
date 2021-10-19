@@ -1,18 +1,25 @@
 import "./App.css";
-import React, { useState } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import Sidebar from "./Sidebar";
 import Chat from "./Chat.js";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {isMobile} from 'react-device-detect';
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
+import { Redirect} from 'react-router';
+
 function App() {
-    const [{ user } , dispatch] = useStateValue();
+    // const [{ user } , dispatch] = useStateValue();
+    const [user , setUser] = useState();
+    useEffect(() => {
+      let data = localStorage.getItem('data');
+      setUser(JSON.parse(data));
+    }, [])
   return (
     
   <div className="app">
     {!user ? (
-      <Login />
+        <Login />    
     ) 
     :
      (

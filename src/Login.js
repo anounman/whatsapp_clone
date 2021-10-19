@@ -1,27 +1,25 @@
 import { Google } from '@mui/icons-material';
 import { Button } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { auth, provider } from './firebase';
 import "./Login.css";
 import { actionTypes } from './reducer';
 import { useStateValue } from './StateProvider';
 
-function Login() {
-    const [ {user} , dispatch] = useStateValue();
 
+
+function Login() {
+    // const [ {user} , dispatch] = useStateValue();
 
     const signIn = () => {
         auth.signInWithPopup(provider).then(result => {
-            dispatch(
-                {
-                    type: actionTypes.SET_USER, 
-                    user: result.user,
-                }
-            )
+            localStorage.setItem('data', JSON.stringify(result));
         }
         ).catch((error) => alert(error.message));
-
     };
+
+    
+
     return (
         <div className="login">
             <div className="login_container">

@@ -16,7 +16,8 @@ function Chat() {
     const [message , setMessage] = useState([]);
     const {roomId} = useParams();
     const [roomName , setRoomName] = useState("");
-    const [{user} , dispatch] = useStateValue();
+    const [user , setUser] = useState();
+
         useEffect((e) => {
            try{
             if (roomId != '/') {
@@ -30,6 +31,10 @@ function Chat() {
                     });
                             
             }
+
+            let data = localStorage.getItem('data');
+            setUser((JSON.parse(data)).user);
+      
         }
             catch (e){
                 alert(e.message);
@@ -47,6 +52,7 @@ function Chat() {
                 message: input,
                 name: user.displayName,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                // profile: user.
             })
     
             setInput("");
