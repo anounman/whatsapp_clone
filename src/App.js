@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React, { useState } from "react"; 
+import Sidebar from "./Sidebar";
+import Chat from "./Chat.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {isMobile} from 'react-device-detect';
+import Login from "./Login";
+import { useStateValue } from "./StateProvider";
 function App() {
+    const [{ user } , dispatch] = useStateValue();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+  <div className="app">
+    {!user ? (
+      <Login />
+    ) 
+    :
+     (
+          <div className="app_body">
+          <Router >
+            {!isMobile ? (
+              <Sidebar />
+            ) : (
+              <div></div>
+            )}
+            <Switch>
+              <Route path="/rooms/:roomId">
+                  <Chat />
+              </Route>
+              <Route path="/">
+                  {isMobile ? (
+                    <Sidebar />
+                  ):(<div></div>)}
+              </Route>
+            </Switch>
+          </Router>
+      </div>
+  
+    )}
+  </div>
   );
 }
 

@@ -1,0 +1,33 @@
+.login {
+    margin: 0;
+    display: grid;
+    background-color: #f8f8f8;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+}
+
+.login_container {
+    padding: 100px;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgb(150, 150, 151) , 0px 0px;
+}
+
+.whatsapp_image {
+    object-fit: contain;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.sign_in_text {
+    display: grid;
+    align-items: center;
+}
+.login_container > button {
+    margin-top: 50px;
+    background-color: #25995b !important;
+    color: white;
+    border-radius: 5px;
+}
