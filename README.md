@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-##Preview 
+## Preview 
 Open [https://reactwpc.web.app/](https://reactwpc.web.app/) to view preview. 
 
 
