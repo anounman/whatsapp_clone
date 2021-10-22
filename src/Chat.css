@@ -56,10 +56,17 @@
 
 }
 .chat_name {
+    display: flex;
     position: absolute;
     top: -14px;
+    left: -25px;
+    justify-content: center;
     font-weight: 800;
     font-size: xx-small;
+}
+
+.chat_name_profile {
+    padding-right: 5px;
 }
 
 .chat_reciver {

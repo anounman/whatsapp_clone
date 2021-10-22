@@ -14,6 +14,7 @@ function Login() {
     const signIn = () => {
         auth.signInWithPopup(provider).then(result => {
             localStorage.setItem('data', JSON.stringify(result));
+            window.location.reload();
         }
         ).catch((error) => alert(error.message));
     };

@@ -52,7 +52,7 @@ function Chat() {
                 message: input,
                 name: user.displayName,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                // profile: user.
+                profile: user.photoURL,
             })
     
             setInput("");
@@ -95,6 +95,9 @@ function Chat() {
                 {message.map((message) => (
                     <p className={`chat_message ${message.name == user.displayName && "chat_reciver"}`}>
                     <span className="chat_name">
+                        <span className="chat_name_profile">
+                            <Avatar sx={{height: 24 , width:24}} src={message.profile}/>                            
+                        </span>
                     {message.name}
                     </span>
                     {message.message} 
