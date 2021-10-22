@@ -56,19 +56,31 @@
 
 }
 .chat_name {
+    display: flex;
     position: absolute;
+<<<<<<< HEAD
     top: -15px;
     left: -10px;
     display: flex;
+=======
+    top: -14px;
+    left: -25px;
+    justify-content: center;
+>>>>>>> a16c666b9de6270377d4bb91b225c6047006bf11
     font-weight: 800;
     font-size: xx-small;
 }
 
+<<<<<<< HEAD
 .chat_name_avatar {
     position: absolute;
     top: -1px;
     left: -14px;
     
+=======
+.chat_name_profile {
+    padding-right: 5px;
+>>>>>>> a16c666b9de6270377d4bb91b225c6047006bf11
 }
 
 .chat_reciver {

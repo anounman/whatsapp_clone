@@ -1,4 +1,4 @@
-import { InsertEmoticon, Mic, Password } from '@mui/icons-material';
+import { InsertEmoticon, Mic} from '@mui/icons-material';
 import { AttachFile, SearchOutlined } from '@mui/icons-material';
 import MoreVert from '@mui/icons-material/MoreVert';
 import {isMobile} from 'react-device-detect';
@@ -6,10 +6,9 @@ import { Avatar, IconButton } from '@mui/material';
 import {React , useState , useEffect} from 'react';
 import { useParams } from 'react-router';
 import "./Chat.css";
-import 'emoji-picker-element';
 import db from './firebase';
 import firebase from "firebase";
-import { useStateValue } from './StateProvider';
+// import { useStateValue } from './StateProvider';
 function Chat() {
     const [input , setInput] = useState("");
     const [seed , setSeed] = useState("");
@@ -52,7 +51,7 @@ function Chat() {
                 message: input,
                 name: user.displayName,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                // profile: user.
+                profile: user.photoURL,
             })
     
             setInput("");
@@ -60,13 +59,6 @@ function Chat() {
     };
 
 
-    const emoji = () => {
-            return (
-                <emoji-picker class="light">
-                </emoji-picker>
-            )
-            
-    }
     return (
         <div className={`chat ${isMobile && "chat_mobile"}`}>
             <div className="chat_header">
@@ -95,6 +87,9 @@ function Chat() {
                 {message.map((message) => (
                     <p className={`chat_message ${message.name == user.displayName && "chat_reciver"}`}>
                     <span className="chat_name">
+                        <span className="chat_name_profile">
+                            <Avatar sx={{height: 24 , width:24}} src={message.profile}/>                            
+                        </span>
                     {message.name}
                     </span>
                     {message.message} 
