@@ -13,8 +13,8 @@ import { useStateValue } from "./StateProvider";
 function Sidebar() {
 
   const  [room , setRooms] = useState([]);
-  const [{user} , dispatch] = useStateValue();
-
+  // const [{user} , dispatch] = useStateValue();
+    const [user , setUser] = useState();
   useEffect(() => {
     db.collection('Rooms').onSnapshot(snapshot => (
       setRooms(snapshot.docs.map(doc => 
@@ -24,7 +24,10 @@ function Sidebar() {
   
         })
         ))
-    ))
+    ));
+    let data = localStorage.getItem('data');
+    setUser((JSON.parse(data)).user);
+
   }, [])
   
 
