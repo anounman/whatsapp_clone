@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues]https://img.shields.io/bitbucket/issues/anounboy/whatsapp_clone?color=green)](https://github.com/anounboy/whatsapp_clone/issues)
+[![GitHub Issues](https://img.shields.io/bitbucket/issues/anounboy/whatsapp_clone?color=green)](https://github.com/anounboy/whatsapp_clone/issues)
 [![GitHub Pull Requests](https://img.shields.io/bitbucket/pr/anounboy/whatsapp_clone?color=green)](https://github.com/anounboy/whatsapp_clone/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -38,8 +38,8 @@ And it use firebase google authenticator for login. You can login with google in
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ## PreView 
-  [PREVIEW]('https://raw.githubusercontent.com/anounboy/whatsapp_clone/master/Screenshot%202022-03-18%20134728.png')
-  [WEBPAGE]('https://reactwpc.web.app/')
+  ![WEBPAGE]('https://reactwpc.web.app/')
+  LINK : https://reactwpc.web.app/
 
 ### Prerequisites
 
