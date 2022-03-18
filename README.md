@@ -8,8 +8,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/anounboy/whatsapp_clone/issues)
+[![GitHub Issues]https://img.shields.io/bitbucket/issues/anounboy/whatsapp_clone?color=green)](https://github.com/anounboy/whatsapp_clone/issues)
+[![GitHub Pull Requests](https://img.shields.io/bitbucket/pr/anounboy/whatsapp_clone?color=green)](https://github.com/anounboy/whatsapp_clone/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
