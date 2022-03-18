@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.freepnglogos.com/uploads/whatsapp-logo-light-green-png-0.png" alt="Project logo"></a>
+ <img width=150px height=150px src="https://www.freepnglogos.com/uploads/whatsapp-logo-light-green-png-0.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">whatsapp_clone</h3>
@@ -62,11 +62,25 @@ Say what the step will be
   npm install @mui/material
 ```
 
-And repeat
+### Fire base Connect
 
-```
-  change firebase.js firebaseConfig key with yours
-```
+  create a config.js file and add the config key on it syntax should be
+  ```
+  
+export const firebaseConfig = {
+    apiKey: API_KEY,
+    authDomain: DOMAIN_NAME,
+    projectId: PROJECT_ID,
+    storageBucket: STORAGE_BUCKET,
+    messagingSenderId: ...,
+    appId: ..,
+    measurementId: ...
+  };
+  ```
+
+  you all of this from firebase just annd export before it and save in on config.js
+
+
 
 End with an example of getting some data out of the system or using it for a little demo.
 
