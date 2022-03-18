@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=150px height=150px src="https://www.freepnglogos.com/uploads/whatsapp-logo-light-green-png-0.png" alt="Project logo"></a>
+ <img width=150px height=100px src="https://www.freepnglogos.com/uploads/whatsapp-logo-light-green-png-0.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">whatsapp_clone</h3>
@@ -31,10 +31,15 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This is a simple whatsapp clone built using react and use firebase a backend 
+This is a simple whatsapp clone built using react and use firebase a backend.
+And it use firebase google authenticator for login. You can login with google in it. 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+## PreView 
+  [PREVIEW]('https://raw.githubusercontent.com/anounboy/whatsapp_clone/master/Screenshot%202022-03-18%20134728.png')
+  [WEBPAGE]('https://reactwpc.web.app/')
 
 ### Prerequisites
 
