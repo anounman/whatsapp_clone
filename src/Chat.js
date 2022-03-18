@@ -102,7 +102,7 @@ function Chat() {
                 
             </div>
             <div className="chat_fotter">
-                    <IconButton onClick={emoji}>
+                    <IconButton onClick=''>
                         <InsertEmoticon />
                     </IconButton>
                 <form>

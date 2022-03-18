@@ -22,7 +22,7 @@ function App() {
         <Login />    
     ) 
     :
-     (
+     (  
           <div className="app_body">
           <Router >
             {!isMobile ? (
